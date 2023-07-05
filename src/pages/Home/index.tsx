@@ -1,4 +1,8 @@
 import { Play } from 'phosphor-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as zod from 'zod';
+
 import {
   CountdownContainer,
   FormContainer,
@@ -9,13 +13,41 @@ import {
   TaskInput,
 } from './styles';
 
+const newCycleFormValidationSchema = zod.object({
+  task: zod.string().min(1, 'Insert a name for your task'),
+  minutesAmount: zod
+    .number()
+    .min(5, 'The cycle needs to be at least 5 minutes.')
+    .max(60, 'The cycle needs to be a maximum of 60 minutes.'),
+});
+
+type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>;
+
 export function Home() {
+  const { register, handleSubmit, watch, reset } = useForm<NewCycleFormData>({
+    resolver: zodResolver(newCycleFormValidationSchema),
+    defaultValues: {
+      task: '',
+      minutesAmount: 0,
+    },
+  });
+  const isSubmitDisabled = watch('task');
+
+  function handleSubmitNewCycle(data: NewCycleFormData) {
+    console.log('denise', data);
+    reset();
+  }
+
   return (
     <HomeContainer>
-      <form action="">
+      <form action="" onSubmit={handleSubmit(handleSubmitNewCycle)}>
         <FormContainer>
           <label htmlFor="task">I'm going to work on </label>
-          <TaskInput id="task" list="task-suggestions" placeholder="Name your project" />
+          <TaskInput
+            list="task-suggestions"
+            placeholder="Name your project"
+            {...register('task')}
+          />
           <datalist id="task-suggestions">
             <option value="Project 1"></option>
             <option value="Project 2"></option>
@@ -31,6 +63,7 @@ export function Home() {
             step={5}
             min={5}
             max={60}
+            {...register('minutesAmount', { valueAsNumber: true })}
           />
           <span>minutes.</span>
         </FormContainer>
@@ -43,7 +76,7 @@ export function Home() {
           <span>0</span>
         </CountdownContainer>
 
-        <StartCountdownButton disabled type="submit">
+        <StartCountdownButton type="submit" disabled={!isSubmitDisabled}>
           <Play />
           Start
         </StartCountdownButton>
