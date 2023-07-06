@@ -11,7 +11,7 @@ box-sizing:border-box;
     box-shadow: 0 0 0 2px ${(props) => props.theme['gray-500']};
 }
 body{
-    background: ${(props) => props.theme['gray-900']};
+    background: ${(props) => props.theme['purple-500']}; 
     color: ${(props) => props.theme['gray-300']};
     -webkit-font-smoothing: antialiased;
 }
