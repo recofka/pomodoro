@@ -6,7 +6,9 @@ import logo from '../../assets/logo.svg';
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logo} alt="Logo Image" />
+      <NavLink to="/" title="Logo">
+        <img src={logo} alt="Logo Image" />
+      </NavLink>
       <nav>
         <NavLink to="/" title="Timer">
           <Timer size={24} />
