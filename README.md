@@ -54,7 +54,7 @@ The purpose of this application is to showcase the usage of Hooks and Context wi
 
 ## Goals
 
-<p>The primary goals of this project were to develop a Pomodoro application while emphasizing the utilization of specific React hooks. I aimed to leverage the power of hooks such as useState, useEffect, useContext to construct a robust application. By utilizing these hooks, I intended to enhance the application's state management, side effect handling, context sharing, and DOM manipulation. </p>
+<p>The primary goal of this project was to develop a Pomodoro application using some specific React hooks. I aimed to leverage the power of hooks such as useState, useEffect and useContext to construct a robust application. By utilizing these hooks, I intended to enhance the application's state management, side effect handling, context sharing, and DOM manipulation. </p>
 
 ## Installation
 
