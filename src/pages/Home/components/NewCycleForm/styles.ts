@@ -6,10 +6,23 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: ${(props) => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-700']};
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  @media (max-width: 768px) {
+    &:first-child {
+      margin-bottom: 1.5rem;
+    }
+  }
 `;
 
 const BaseInput = styled.input`
@@ -20,7 +33,7 @@ const BaseInput = styled.input`
   font-weight: bold;
   font-size: 1.125rem;
   padding: 0 0.5rem;
-  color: ${(props) => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-600']};
 
   &:focus {
     box-shadow: none;

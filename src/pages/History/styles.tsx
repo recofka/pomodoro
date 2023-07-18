@@ -7,7 +7,11 @@ export const HistoryContainer = styled.main`
   flex-direction: column;
   h1 {
     font-size: 1.5rem;
-    color: ${(props) => props.theme['gray-100']};
+    color: ${(props) => props.theme['gray-700']};
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
   }
 `;
 
@@ -48,6 +52,12 @@ export const HistoryList = styled.div`
       &:last-child {
         padding-right: 1.5rem;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    table {
+      min-width: unset;
     }
   }
 `;

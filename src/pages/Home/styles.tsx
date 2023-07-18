@@ -31,6 +31,11 @@ export const BaseCountdownButton = styled.button`
     opacity: 0.7;
     cursor: not-allowed;
   }
+
+  @media (max-width: 768px) {
+    border: 1px solid fuchsia;
+    width: 90%;
+  }
 `;
 
 export const StartCountdownButton = styled(BaseCountdownButton)`
