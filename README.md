@@ -24,7 +24,7 @@
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#frontend">Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <!-- <a href="#goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; -->
+  <a href="#goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
 </p>
 
@@ -43,7 +43,8 @@ This project was developed with the following technologies:
 
 ## Project
 
-This project aims to demonstrate the usage of React and its hooks.
+I developed a Pomodoro application that allows users to input a project name and customize the duration time. The application also provides functionality to save a list of activities(completed and interrupted for tracking purposes.
+The purpose of this application is to showcase the usage of Hooks and Context within React, I intentionally implemented an over-engineered solution. The project demonstrates how these advanced features can be effectively utilized to enhance the application's functionality and maintain code organization.
 
 ## Frontend
 
@@ -51,9 +52,9 @@ This project aims to demonstrate the usage of React and its hooks.
 
 ![Alt Text](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTM3NDlscDIwZXRxZm9jYWljMmdyZ2RydWIzMWI1dWJuenFweGxwZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IOGSEb9tmD2PXosMtl/giphy.gif)
 
-<!-- ## Goals
+## Goals
 
-<p>The main goal of this small project is learn the basic concept of Storybook and Chakra UI.</p> -->
+<p>The primary goals of this project were to develop a Pomodoro application while emphasizing the utilization of specific React hooks. I aimed to leverage the power of hooks such as useState, useEffect, useContext to construct a robust application. By utilizing these hooks, I intended to enhance the application's state management, side effect handling, context sharing, and DOM manipulation. </p>
 
 ## Installation
 
@@ -65,5 +66,5 @@ $ git clone git@github.com:recofka/pomodoro
 $ yarn install
 
 # Start the project with the command:
-$ yarn start
+$ yarn run dev
 ```
